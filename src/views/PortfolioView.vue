@@ -1,14 +1,12 @@
 <script setup>
-import TopNav from '@/components/TopNav.vue';
 import TheIntro from '@/components/TheIntro.vue';
+import ProjectList from '../components/ProjectList.vue';
 </script>
 
 <template>
-  <header>
-    <TopNav />
-    <TheIntro />
-  </header>
   <main>
+    <TheIntro />
+    <ProjectList />
   </main>
 </template>
 
