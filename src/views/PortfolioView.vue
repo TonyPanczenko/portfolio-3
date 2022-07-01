@@ -1,12 +1,12 @@
 <script setup>
 import TheIntro from '@/components/TheIntro.vue';
-import ProjectList from '../components/ProjectList.vue';
+import PortfolioList from '@/components/PortfolioList.vue';
 </script>
 
 <template>
   <main>
     <TheIntro />
-    <ProjectList />
+    <PortfolioList />
   </main>
 </template>
 

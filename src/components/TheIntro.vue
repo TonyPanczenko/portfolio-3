@@ -12,7 +12,7 @@
 
 <style scoped lang="scss">
 .intro {
-  background-color: var(--c-primary);
+  background: linear-gradient(to right, #ffd89b, #19547b);
 
   &__content {
     display: flex;

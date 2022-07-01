@@ -6,8 +6,8 @@ const tab = ref('portfolio');
 
 <template>
   <nav class="nav">
-    <q-tabs v-model="tab" class="nav__tabs shadow-2" align="right" narrow-indicator>
-      <q-route-tab name="portfolio" label="Portfolio" :to="{ name: 'portfolio' }" />
+    <q-tabs v-model="tab" class="nav__tabs" align="right" narrow-indicator>
+      <q-route-tab name="portfolio" label="Portfolio" :to="{ name: 'portfolio' }" class="no-border" />
       <q-route-tab name="contact" label="Contact" :to="{ name: 'contact' }" />
     </q-tabs>
   </nav>
@@ -15,13 +15,11 @@ const tab = ref('portfolio');
 
 <style scoped lang="scss">
 .nav {
-  margin: 0 auto;
-  width: 80%;
+  width: 100%;
+  padding: 0 10%;
   position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0);
 
-  background-color: var(--c-primary);
+  background: linear-gradient(to right, #ffd89b, #19547b);
 
   &__tabs {
     padding: 0 20px;
@@ -30,6 +28,7 @@ const tab = ref('portfolio');
 
 :deep(.q-tab) {
   color: var(--c-accent-first);
+  border-left: 1px solid var(--c-accent-first);
 }
 
 :deep(.q-tab__indicator) {
