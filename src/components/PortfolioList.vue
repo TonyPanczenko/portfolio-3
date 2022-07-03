@@ -1,4 +1,4 @@
-<script script>
+<script setup>
 import PortfolioItem from './PortfolioItem.vue';
 
 const projects = [
@@ -10,9 +10,9 @@ const projects = [
       such as price, mileage, type of powertrain etc. Different vehicles can be compared, favourited,\
       have their detailed specs viewed and used to generate hot leads through submitted enquiries.',
     technologies: ['Vue.js', 'Node.js', 'Serverless', 'GraphQL', 'Geolocation', 'AWS Cloud'],
-    previewUrl: 'a',
+    previewUrl: 'https://asia.olympus-imaging.com/content/000107507.jpg',
     sourceUrl: 'a',
-    imgUrl: 'a'
+    imgUrl: 'https://asia.olympus-imaging.com/content/000107507.jpg'
   },
 ];
 </script>

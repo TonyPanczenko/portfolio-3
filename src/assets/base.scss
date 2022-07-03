@@ -5,7 +5,13 @@
 
 body {
   margin: 0;
-  overflow: hidden;
+
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 // Style scheme variables
