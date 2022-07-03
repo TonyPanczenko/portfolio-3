@@ -5,25 +5,28 @@ const tab = ref('portfolio');
 </script>
 
 <template>
-  <nav class="nav">
-    <q-tabs v-model="tab" class="nav__tabs" align="right" narrow-indicator>
-      <q-route-tab name="portfolio" label="Portfolio" :to="{ name: 'portfolio' }" class="no-border" />
-      <q-route-tab name="contact" label="Contact" :to="{ name: 'contact' }" />
-    </q-tabs>
-  </nav>
+	<nav class="nav">
+		<q-tabs v-model="tab"
+			class="nav__tabs layout"
+			align="right"
+			narrow-indicator
+		>
+			<q-route-tab name="portfolio"
+				label="Portfolio"
+				:to="{ name: 'portfolio' }"
+				class="no-border" 
+			/>
+			<q-route-tab name="contact" label="Contact" :to="{ name: 'contact' }" />
+		</q-tabs>
+	</nav>
 </template>
 
 <style scoped lang="scss">
 .nav {
   width: 100%;
-  padding: 0 10%;
   position: fixed;
 
   background: linear-gradient(to right, #ffd89b, #19547b);
-
-  &__tabs {
-    padding: 0 20px;
-  }
 }
 
 :deep(.q-tab) {

@@ -28,7 +28,31 @@ module.exports = {
     'semi': [
       'error',
       'always'
-    ]
+    ],
+    'max-len': ['error', {
+      code: 120,
+      ignoreTrailingComments: true
+    }
+    ],
+    'vue/max-attributes-per-line': ['error', {
+      'singleline': {
+        'max': 3
+      },
+      'multiline': {
+        'max': 1
+      }
+    }],
+    'vue/html-indent': ['error', 'tab', {
+      'attribute': 1,
+      'baseIndent': 1,
+      'closeBracket': {
+        startTag: 0,
+        endTag: 0,
+        selfClosingTag: 0,
+      },
+      'alignAttributesVertically': true,
+      'ignores': []
+    }]
   },
   'ignorePatterns': ['dist/*'],
   settings: {

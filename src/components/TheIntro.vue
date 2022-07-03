@@ -2,12 +2,12 @@
 </script>
 
 <template>
-  <div class="intro">
-    <div class="intro__content">
-      <h1>Hi, I'm Tony</h1>
-      <h2>and these are some of my projects.</h2>
-    </div>
-  </div>
+	<div class="intro">
+		<div class="intro__content layout">
+			<h1>Hi, I'm Tony</h1>
+			<h2>and these are some of my projects.</h2>
+		</div>
+	</div>
 </template>
 
 <style scoped lang="scss">
@@ -17,11 +17,6 @@
   &__content {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 80%;
-    max-width: $breakpoint-lg-min;
-
-    padding: 0 20px;
   }
 }
 

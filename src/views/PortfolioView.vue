@@ -4,10 +4,10 @@ import PortfolioList from '@/components/PortfolioList.vue';
 </script>
 
 <template>
-  <main>
-    <TheIntro />
-    <PortfolioList />
-  </main>
+	<main>
+		<TheIntro />
+		<PortfolioList />
+	</main>
 </template>
 
 <style scoped lang="scss">

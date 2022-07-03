@@ -4,10 +4,10 @@ import TopNav from '@/components/TopNav.vue';
 </script>
 
 <template>
-  <header>
-    <TopNav />
-  </header>
-  <RouterView />
+	<header>
+		<TopNav />
+	</header>
+	<RouterView />
 </template>
 
 <style lang="scss">

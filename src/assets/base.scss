@@ -12,6 +12,12 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+
+  .layout {
+    margin: 0 auto;
+    width: 80%;
+    max-width: $breakpoint-lg-min;
+  }
 }
 
 // Style scheme variables
