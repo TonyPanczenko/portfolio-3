@@ -3,23 +3,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-
-  scrollbar-width: 0;
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  .layout {
-    margin: 0 auto;
-    width: 80%;
-    max-width: $breakpoint-lg-min;
-  }
-}
-
 // Style scheme variables
 :root {
   --c-primary:                        #030101;
@@ -27,16 +10,19 @@ body {
   --c-accent-first:                   rgb(206, 61, 242);
   --c-accent-second:                  rgb(9, 232, 135);
 
-  --c-dark:                           #1d1d1d;
-  --c-dark-page:                      #121212;
-  --c-positive:                       #21BA45;
-  --c-negative:                       #C10015;
-  --c-info:                           #31CCEC;
-  --c-warning:                        #F2C037;
+  --q-primary:                        var(--c-primary);
+  --q-secondary:                      var(--c-secondary);
+  --q-accent:                         var(--c-accent-first);
+  --q-dark:                           #1d1d1d;
+  --q-dark-page:                      #121212;
+  --q-positive:                       #21BA45;
+  --q-negative:                       #C10015;
+  --q-info:                           #31CCEC;
+  --q-warning:                        #F2C037;
   
   --font-color-primary:                 var(--c-primary);
   --font-color-secondary:               var(--c-primary);
   --font-color-bright-primary:          var(--c-accent-first);
   --font-color-bright-secondary:        var(--c-accent-second);
-  --font-family-primary:                Tahoma;
+  --font-family-primary:                'Roboto Slab', serif;
 }

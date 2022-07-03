@@ -13,7 +13,24 @@ import TopNav from '@/components/TopNav.vue';
 <style lang="scss">
 @import '@/assets/base.scss';
 
-:root {
+* {
   font-family: var(--font-family-primary);
+}
+
+body {
+  margin: 0;
+
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .layout {
+    margin: 0 auto;
+    width: 80%;
+    max-width: $breakpoint-lg-min;
+  }
 }
 </style>

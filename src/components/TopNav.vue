@@ -10,6 +10,7 @@ const tab = ref('portfolio');
 			class="nav__tabs layout"
 			align="right"
 			narrow-indicator
+			no-caps
 		>
 			<q-route-tab name="portfolio"
 				label="Portfolio"
@@ -25,8 +26,9 @@ const tab = ref('portfolio');
 .nav {
   width: 100%;
   position: fixed;
+	z-index: 100;
 
-  background: linear-gradient(to right, #ffd89b, #19547b);
+  background: white;
 }
 
 :deep(.q-tab) {
