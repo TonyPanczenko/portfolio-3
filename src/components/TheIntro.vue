@@ -4,30 +4,36 @@
 <template>
 	<div class="intro">
 		<div class="intro__content layout">
-			<h1>Hi, I'm Tony</h1>
-			<h2>and these are some of my projects.</h2>
+			<h2>
+				I am a <span class="intro__emphasis">software engineering leader</span> 
+				who specialises in architecting scaleable solutions while keeping apps engaging to the user.
+				I foster an environment where developers are able to take risks and innovate.
+			</h2>
 		</div>
+		<div></div>
 	</div>
 </template>
 
 <style scoped lang="scss">
 .intro {
-  background: linear-gradient(to right, #ffd89b, #19547b);
+  // display: flex;
+  // flex-direction: column;
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    padding: 160px 0 120px;
+  }
+
+  &__emphasis {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    padding: 5px 10px;
   }
 }
 
-h1 {
-  color: var(--font-color-bright-primary);
-  margin-top: 200px;
-}
-
 h2 {
-  color: var(--font-color-bright-secondary);
-  align-self: flex-end;
-  margin-bottom: 200px;
+  width: 50%;
+
+  font-size: 2rem;
+  text-align: justify;
 }
 </style>

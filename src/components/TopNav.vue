@@ -6,19 +6,22 @@ const tab = ref('portfolio');
 
 <template>
 	<nav class="nav">
-		<q-tabs v-model="tab"
-			class="nav__tabs layout"
-			align="right"
-			narrow-indicator
-			no-caps
-		>
-			<q-route-tab name="portfolio"
-				label="Portfolio"
-				:to="{ name: 'portfolio' }"
-				class="no-border" 
-			/>
-			<q-route-tab name="contact" label="Contact" :to="{ name: 'contact' }" />
-		</q-tabs>
+		<div class="nav__container layout">
+			<h1>Tony Panczenko</h1>
+			<q-tabs v-model="tab"
+				class="nav__tabs"
+				align="right"
+				narrow-indicator
+				no-caps
+			>
+				<q-route-tab name="portfolio"
+					label="Portfolio"
+					:to="{ name: 'portfolio' }"
+					class="no-border" 
+				/>
+				<q-route-tab name="contact" label="Contact" :to="{ name: 'contact' }" />
+			</q-tabs>
+		</div>
 	</nav>
 </template>
 
@@ -29,11 +32,27 @@ const tab = ref('portfolio');
 	z-index: 100;
 
   background: white;
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	h1 {
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+	}
 }
 
 :deep(.q-tab) {
   color: var(--c-accent-first);
   border-left: 1px solid var(--c-accent-first);
+}
+
+:deep(.q-tab__label) {
+	font-size: 1.2rem;
 }
 
 :deep(.q-tab__indicator) {

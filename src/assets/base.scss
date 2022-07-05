@@ -9,6 +9,7 @@
   --c-secondary:                      rgb(117, 46, 46);
   --c-accent-first:                   rgb(206, 61, 242);
   --c-accent-second:                  rgb(9, 232, 135);
+  --c-accent-fadeout:                 rgb(162, 162, 162);
 
   --q-primary:                        var(--c-primary);
   --q-secondary:                      var(--c-secondary);
@@ -24,5 +25,5 @@
   --font-color-secondary:               var(--c-primary);
   --font-color-bright-primary:          var(--c-accent-first);
   --font-color-bright-secondary:        var(--c-accent-second);
-  --font-family-primary:                'Roboto Slab', serif;
+  --font-family-primary:                'League Spartan', sans-serif;
 }

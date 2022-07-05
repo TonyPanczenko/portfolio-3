@@ -1,6 +1,6 @@
 <script setup>
 import { toRef } from 'vue';
-import { mdiEyeArrowRightOutline, mdiCodeTags } from '@mdi/js';
+import { mdiEyeArrowRightOutline, mdiCodeTags, mdiChevronRight } from '@mdi/js';
 
 const props = defineProps({
   project: Object
@@ -13,12 +13,16 @@ const project = toRef(props, 'project');
 	<div class="item">
 		<img class="item__img" :src="project.imgUrl" :alt="`Preview image of ${project.name}`">
 		<div class="item__content">
-			<h3>{{ project.name }}</h3>
+			<h3>
+				{{ project.name }} 
+				<q-icon :name="mdiChevronRight" /> 
+				<a :href="project.previewUrl">{{ project.domain }}</a>
+			</h3>
 			<div class="item__badgeline">
 				<q-badge v-for="tech in project.technologies"
 					:key="tech"
 					:label="tech"
-					class="item__badge shadow-2"
+					class="item__badge"
 					:class="`item__badge--${tech}`.replace(/[.\s]/g, '').toLocaleLowerCase()"
 				/>
 			</div>
@@ -62,9 +66,7 @@ $badge-colors: (
   flex-direction: row;
 	align-items: center;
 
-	margin: 0 20px;
 	padding: 10px 0;
-	border-bottom: 1px lightgrey solid;
 
 	&__img {
 		margin-right: 20px;
@@ -82,6 +84,16 @@ $badge-colors: (
 	h3 {
 		margin: 10px 0;
 		font-size: 1.8rem;
+
+		.q-icon {
+			color: var(--c-accent-fadeout);
+			margin: 0 10px;
+		}
+
+		a, a:visited, a:hover, a:active, a:link {
+			color: rgb(130, 151, 255);
+			font-size: 1.2rem;
+		}
 	}
 
 	&__badgeline {
@@ -89,14 +101,27 @@ $badge-colors: (
 	}
 
 	&__badge {
-		margin-right: 10px;
-		font-size: 1.2rem;
-		line-height: 1.2rem;
+		padding: 0 10px;
+		font-size: 1.1rem;
+		line-height: 1.0rem;
 		font-family: 'League Spartan', sans-serif;
+
+		border-right: solid 1px var(--c-accent-fadeout);
+		border-radius: 0px;
+		background-color: transparent;
+		opacity: 0.8;
+
+		&:first-child {
+			padding-left: 0px;
+		}
+
+		&:last-child {
+			border-right: 0;
+		}
 	}
 
 	&__description {
-		font-size: 1.1rem;
+		font-size: 1rem;
 		text-align: justify;
 		text-justify: auto;
 	}
@@ -114,8 +139,8 @@ $badge-colors: (
 
 @each $tech, $color in $badge-colors {
   .item__badge--#{$tech} {
-    background-color: $color;
-    border-color: $color;
+    color: $color;
+    border-color: var(--c-accent-fadeout);
   }
 }
 </style>

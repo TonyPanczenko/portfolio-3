@@ -12,6 +12,7 @@ const projects = [
       The app is live in over 40 countries and supports some configurable feature variation between them.',
     technologies: ['Vue.js', 'Node.js', 'Serverless', 'GraphQL', 'Geolocation', 'AWS Cloud'],
     previewUrl: 'https://asia.olympus-imaging.com/content/000107507.jpg',
+    domain: 'approved.es.jaguar.com',
     sourceUrl: '',
     imgUrl: 'https://asia.olympus-imaging.com/content/000107507.jpg'
   },
