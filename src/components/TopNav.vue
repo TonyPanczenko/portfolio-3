@@ -5,7 +5,7 @@ const tab = ref('portfolio');
 </script>
 
 <template>
-	<nav class="nav">
+	<nav class="nav shadow-2">
 		<div class="nav__container layout">
 			<h1>Tony Panczenko</h1>
 			<q-tabs v-model="tab"
@@ -17,9 +17,12 @@ const tab = ref('portfolio');
 				<q-route-tab name="portfolio"
 					label="Portfolio"
 					:to="{ name: 'portfolio' }"
-					class="no-border" 
+					:ripple="{ color: 'secondary' }"
 				/>
-				<q-route-tab name="contact" label="Contact" :to="{ name: 'contact' }" />
+				<q-route-tab name="contact"
+					label="Contact"
+					:to="{ name: 'contact' }"
+					:ripple="{ color: 'secondary' }" />
 			</q-tabs>
 		</div>
 	</nav>
@@ -46,16 +49,11 @@ const tab = ref('portfolio');
 	}
 }
 
-:deep(.q-tab) {
-  color: var(--c-accent-first);
-  border-left: 1px solid var(--c-accent-first);
-}
-
 :deep(.q-tab__label) {
 	font-size: 1.2rem;
 }
 
 :deep(.q-tab__indicator) {
-  background-color: var(--c-accent-second);
+  background-color: var(--c-accent-first);
 }
 </style>

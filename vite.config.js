@@ -10,7 +10,11 @@ export default defineConfig({
     }), 
     splitVendorChunkPlugin(),
     quasar()
-  ],
+  ], 
+  build: {       
+    outDir: 'dist',
+  },     
+  publicDir: fileURLToPath(new URL('./public', import.meta.url)),
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

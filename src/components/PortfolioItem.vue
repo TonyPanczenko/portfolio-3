@@ -1,6 +1,7 @@
 <script setup>
 import { toRef } from 'vue';
 import { mdiEyeArrowRightOutline, mdiCodeTags, mdiChevronRight } from '@mdi/js';
+import ImageCarousel from './ImageCarousel.vue';
 
 const props = defineProps({
   project: Object
@@ -11,7 +12,7 @@ const project = toRef(props, 'project');
 
 <template>
 	<div class="item">
-		<img class="item__img" :src="project.imgUrl" :alt="`Preview image of ${project.name}`">
+		<ImageCarousel :imgUrls="project.imgUrls" class="item__carousel" />
 		<div class="item__content">
 			<h3>
 				{{ project.name }} 
@@ -36,14 +37,14 @@ const project = toRef(props, 'project');
 					class="item__btn"
 					glossy
 					unelevated
-					color="grey-8" />
+					color="black" />
 				<q-btn :disable="!project.sourceUrl"
 					:icon="mdiCodeTags"
 					:href="project.sourceUrl"
 					class="item__btn"
 					glossy
 					unelevated
-					color="grey-8" />
+					color="black" />
 			</div>
 		</div>
 	</div>
@@ -58,27 +59,32 @@ $badge-colors: (
   "graphql": #e535ab,
   "geolocation": rgb(0, 34, 255),
   "awscloud": #f7981f,
-  "awscdk": #ffc32f  
+  "awscdk": #ffc32f,
+	"vite": #a365f8,
+	"quasar": #42a5f5,
+	"vuecli": #34495e, 
+	"vuetify": #7bc6ff, 
 );
 
 .item {
   display: flex;
   flex-direction: row;
-	align-items: center;
+	align-items: flex-start;
 
 	padding: 10px 0;
+	margin: 10px 0;
 
-	&__img {
-		margin-right: 20px;
-		object-fit: cover;
-		flex: 1 0 auto;
-		height: 240px;
+	&__carousel {
+		width: 100%;
+		flex: 1 0 400px;
 	}
 
 	&__content {
 		display: flex;
 		flex-direction: column;
 		flex: 1 1 auto;
+
+		margin-left: 50px;
 	}
 
 	h3 {
