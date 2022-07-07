@@ -5,7 +5,7 @@ import { mdiCircle, mdiFullscreen, mdiFullscreenExit, mdiChevronRight, mdiChevro
 const props = defineProps({
   imgUrls: Array
 });
-const slide = ref(1);
+const slide = ref(0);
 const fullscreen = ref(false);
 </script>
 

@@ -1,6 +1,6 @@
 <script setup>
 import { toRef } from 'vue';
-import { mdiEyeArrowRightOutline, mdiCodeTags, mdiChevronRight } from '@mdi/js';
+import { mdiEyeArrowRightOutline, mdiCodeTags, mdiChevronRight, mdiCodeBraces } from '@mdi/js';
 import ImageCarousel from './ImageCarousel.vue';
 
 const props = defineProps({
@@ -37,14 +37,48 @@ const project = toRef(props, 'project');
 					class="item__btn"
 					glossy
 					unelevated
-					color="black" />
-				<q-btn :disable="!project.sourceUrl"
+					color="black" >
+					<q-tooltip class="bg-accent text-white text-body2"
+						style="opacity: 0.8"
+						:offset="[0, 15]"
+						:delay="800"
+						:transitionHide="'fade'"
+						:transition-duration="200" >
+						Live preview
+					</q-tooltip>
+				</q-btn>
+				<q-btn :disable="!project.frontendSource"
 					:icon="mdiCodeTags"
-					:href="project.sourceUrl"
+					:href="project.frontendSource"
 					class="item__btn"
 					glossy
 					unelevated
-					color="black" />
+					color="black" >
+					<q-tooltip class="bg-accent text-white text-body2"
+						style="opacity: 0.8"
+						:offset="[0, 15]"
+						:delay="800"
+						:transitionHide="'fade'"
+						:transition-duration="200" >
+						Frontend source
+					</q-tooltip>
+				</q-btn>
+				<q-btn :disable="!project.backendSource"
+					:icon="mdiCodeBraces"
+					:href="project.backendSource"
+					class="item__btn"
+					glossy
+					unelevated
+					color="black" >
+					<q-tooltip class="bg-accent text-white text-body2"
+						style="opacity: 0.8"
+						:offset="[0, 15]"
+						:delay="800"
+						:transitionHide="'fade'"
+						:transition-duration="200" >
+						Backend source
+					</q-tooltip>
+				</q-btn>
 			</div>
 		</div>
 	</div>
@@ -58,12 +92,16 @@ $badge-colors: (
   "serverless": #fd5750,
   "graphql": #e535ab,
   "geolocation": rgb(0, 34, 255),
-  "awscloud": #f7981f,
+  "awssdk": #f7981f,
   "awscdk": #ffc32f,
 	"vite": #a365f8,
 	"quasar": #42a5f5,
 	"vuecli": #34495e, 
 	"vuetify": #7bc6ff, 
+	"webpack": #1c78c0,
+	"cracli": #09d3ac,
+	"canvas": rgb(70, 70, 70),
+	"nosql": rgb(70, 70, 70) 
 );
 
 .item {
@@ -72,7 +110,7 @@ $badge-colors: (
 	align-items: flex-start;
 
 	padding: 10px 0;
-	margin: 10px 0;
+	margin: 15px 0;
 
 	&__carousel {
 		width: 100%;
@@ -139,7 +177,7 @@ $badge-colors: (
 
 	&__btn {
 		margin-left: 20px;
-		width: 100px;
+		width: 60px;
 	}
 }
 
