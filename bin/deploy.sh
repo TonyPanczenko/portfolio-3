@@ -7,7 +7,7 @@ set +o allexport
 
 npm run build
 
-cd build
+cd dist
 
 git init
 git checkout -b main
