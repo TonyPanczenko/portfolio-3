@@ -50,14 +50,27 @@ e-pace_k23/49ojd/a-20p-249aawd_a-e-pace_sp2/',
   {
     name: 'Crowd-sourced art project',
     description: 'This app lets any visitor paint a single pixel of a persistent image visible to anyone.\
-    Users can see who and when painted each of the pixels. Inspired by r/place.',
+    Users can see who and when painted each of the pixels. CDK proof of concept inspired by r/place.',
     technologies: ['React.js', 'Canvas', 'Node.js', 'NoSQL', 'AWS CDK', 'AWS SDK', 'CRA CLI', 'Webpack'],
     previewUrl: 'https://tonypanczenko.github.io/rplace-concept/',
-    domain: '<GitHub Pages>',
+    domain: '[GH Pages]',
     frontendSource: 'https://github.com/TonyPanczenko/rplace-concept',
     backendSource: 'https://github.com/TonyPanczenko/rplace-concept-backend',
     imgUrls: [
       '/assets/rplaceconcept/Capture1.png',
+    ]
+  },
+  {
+    name: 'This portfolio app',
+    description: 'This minimalistic portfolio page, you are looking at right now, was built using some of Vue\'s\
+    newest features at the time and some of Quasar\'s fantastic carousel APIs. Thank you for browsing.',
+    technologies: ['Vue.js', 'Quasar', 'Vite'],
+    previewUrl: 'https://tonypanczenko.github.io/',
+    domain: 'tonypanczenko.github.io',
+    frontendSource: 'https://github.com/TonyPanczenko/portfolio-3',
+    backendSource: '',
+    imgUrls: [
+      '/assets/portfolio/Capture1.png',
     ]
   },
 ];
