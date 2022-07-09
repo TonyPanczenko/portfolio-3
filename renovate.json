@@ -7,7 +7,7 @@
     "every weekend"
   ],
   "separateMultipleMajor": true,
-  "rangeStrategy": "in-range-only",
+  "rangeStrategy": "update-lockfile",
   "major": {
     "stabilityDays": 60,
     "packageRules": [
