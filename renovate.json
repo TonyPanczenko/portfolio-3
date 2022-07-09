@@ -27,9 +27,11 @@
     "separateMultipleMajor": true
   },
   "minor": {
-    "groupName": "non-major"
+    "groupName": "minor-all"
   },
   "patch": {
-    "groupName": "non-major"
+    "groupName": "patch-all",
+    "rangeStrategy": "in-range-only",
+    "automerge": true
   }
 }
