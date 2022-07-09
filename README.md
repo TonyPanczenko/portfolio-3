@@ -3,6 +3,7 @@
 Frontend app with my personal portfolio. It showcases both - professional and some of the personal projects.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/tonypanczenko/portfolio-3?color=brightgreen)
+![GitHub last commit](https://img.shields.io/github/last-commit/tonypanczenko/portfolio-3?color=brightgreen)
 
 ## Project Setup
 
@@ -25,7 +26,7 @@ npm run build
 ### Build for Production, then deploy /dist assets on GH Pages
 
 ```sh
-npm run preview
+npm run deploy
 ```
 
 ### Serve a local static web server with existing files from /dist
