@@ -1,6 +1,6 @@
 # portfolio-3
 
-Frontend app with my personal portfolio. It showcases both - professional and some of the personal projects. Available at tonypanczenko.github.io/.
+Frontend app with my personal portfolio. It showcases both - professional and some of the personal projects. Available on [GitHub Pages](https://tonypanczenko.github.io/).
 
 [![GitHub repo active](https://img.shields.io/badge/repo-active-brightgreen)](https://tonypanczenko.github.io/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/tonypanczenko/portfolio-3?color=brightgreen)](https://github.com/TonyPanczenko/portfolio-3)
