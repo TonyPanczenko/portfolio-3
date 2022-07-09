@@ -6,28 +6,40 @@
   "schedule": [
     "every weekend"
   ],
-  "packageRules": [
-    {
-      "matchDepTypes": ["dependencies"],
-      "rangeStrategy": "bump",
-      "bumpVersion": "minor"
-    },
-    {
-      "matchDepTypes": ["devDependencies"],
-      "rangeStrategy": "in-range-only"
-    },
-    {
-      "matchDepTypes": ["peerDependencies"],
-      "rangeStrategy": "bump",
-      "bumpVersion": "minor"
-    }
-  ],
+  "separateMultipleMajor": true,
   "major": {
     "stabilityDays": 60,
-    "separateMultipleMajor": true
+    "packageRules": [
+      {
+        "matchDepTypes": ["dependencies"],
+        "rangeStrategy": "update-lockfile"
+      },
+      {
+        "matchDepTypes": ["devDependencies"],
+        "rangeStrategy": "in-range-only"
+      },
+      {
+        "matchDepTypes": ["peerDependencies"],
+        "rangeStrategy": "update-lockfile"
+      }
+    ]
   },
   "minor": {
-    "groupName": "minor-all"
+    "groupName": "minor-all",
+    "packageRules": [
+      {
+        "matchDepTypes": ["dependencies"],
+        "rangeStrategy": "update-lockfile"
+      },
+      {
+        "matchDepTypes": ["devDependencies"],
+        "rangeStrategy": "update-lockfile"
+      },
+      {
+        "matchDepTypes": ["peerDependencies"],
+        "rangeStrategy": "update-lockfile"
+      }
+    ],
   },
   "patch": {
     "groupName": "patch-all",
