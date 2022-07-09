@@ -2,8 +2,8 @@
 
 Frontend app with my personal portfolio. It showcases both - professional and some of the personal projects.
 
-[![GitHub repo active](https://img.shields.io/badge/repo-active-brightgreen)]
-[![GitHub last commit](https://img.shields.io/github/last-commit/tonypanczenko/portfolio-3?color=brightgreen)]
+[![GitHub repo active](https://img.shields.io/badge/repo-active-brightgreen)]()
+[![GitHub last commit](https://img.shields.io/github/last-commit/tonypanczenko/portfolio-3?color=brightgreen)]()
 [![Maintained with renovate](https://img.shields.io/badge/maintaied%20with-renovate-blue?logo=renovatebot)](https://renovatebot.com)
 
 ## Project Setup
