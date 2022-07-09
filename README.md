@@ -1,14 +1,8 @@
 # portfolio-3
 
-This template should help get you started developing with Vue 3 in Vite.
+Frontend app with my personal portfolio. It showcases both - professional and some of the personal projects.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+![GitHub last commit](https://img.shields.io/github/last-commit/tonypanczenko/portfolio-3?color=brightgreen)
 
 ## Project Setup
 
@@ -22,10 +16,22 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compile bundles for Production meant for deployment on GH Pages
 
 ```sh
 npm run build
+```
+
+### Build for Production, then deploy /dist assets on GH Pages
+
+```sh
+npm run preview
+```
+
+### Serve a local static web server with existing files from /dist
+
+```sh
+npm run preview
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
