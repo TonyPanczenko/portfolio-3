@@ -7,6 +7,7 @@
     "every weekend"
   ],
   "separateMultipleMajor": true,
+  "rangeStrategy": "in-range-only",
   "major": {
     "stabilityDays": 60,
     "packageRules": [
@@ -39,7 +40,7 @@
         "matchDepTypes": ["peerDependencies"],
         "rangeStrategy": "update-lockfile"
       }
-    ],
+    ]
   },
   "patch": {
     "groupName": "patch-all",
