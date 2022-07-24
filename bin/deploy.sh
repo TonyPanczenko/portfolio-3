@@ -6,6 +6,7 @@ source .env.local
 set +o allexport
 
 npm install
+rm -rf dist
 npm run build
 
 cd dist
