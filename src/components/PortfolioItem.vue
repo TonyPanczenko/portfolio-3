@@ -115,6 +115,8 @@ $badge-colors: (
 	&__carousel {
 		width: 100%;
 		flex: 1 0 400px;
+
+		border: 1px solid rgb(53, 53, 53);
 	}
 
 	&__content {
