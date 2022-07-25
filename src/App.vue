@@ -19,6 +19,7 @@ import TopNav from '@/components/TopNav.vue';
 
 body {
   margin: 0;
+  font-size: 1rem;
 
   scrollbar-width: 0;
   -ms-overflow-style: none;
