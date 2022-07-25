@@ -25,6 +25,7 @@ const message = ref(null);
 					:rules="[val => !!val || 'What is your name?']"
 					error-message="What is your name?"
 					class="col-6 form__input"
+					maxlength="100"
 				/>
 
 				<q-input
@@ -36,6 +37,7 @@ const message = ref(null);
 					no-error-icon
 					:rules="[val => !!val || 'What company do you represent?']"
 					class="col-6 form__input"
+					maxlength="100"
 				/>
 
 				<q-input
@@ -51,6 +53,7 @@ const message = ref(null);
 						val => val.includes('@') || 'Please enter a valid email address'
 					]"
 					class="col-6 form__input"
+					maxlength="50"
 				/>
 
 				<q-input
@@ -62,6 +65,7 @@ const message = ref(null);
 					lazy-rules
 					no-error-icon
 					class="col-6 form__input"
+					maxlength="20"
 				/>
 
 				<q-input
