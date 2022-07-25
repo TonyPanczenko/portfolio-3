@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@mdi/js": "^6.9.96",
+    "@mdi/js": "^7.0.0",
     "firebase": "^9.9.1",
     "pinia": "^2.0.14",
     "quasar": "^2.7.4",
