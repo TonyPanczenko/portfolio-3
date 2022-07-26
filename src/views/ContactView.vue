@@ -1,11 +1,23 @@
 <script setup>
 import { ref } from 'vue';
+import { dbClient } from '@/firebase';
 
 const name = ref(null);
 const company = ref(null);
 const email = ref(null);
 const phoneNum = ref(null);
 const message = ref(null);
+
+const onSubmit = () => {
+  dbClient.addMessage({
+    name: name.value,
+    company: company.value,
+    email: email.value,
+    phoneNum: phoneNum.value,
+    message: message.value,
+    timeStamp: new Date().toDateString()
+  });
+};
 </script>
 
 <template>
