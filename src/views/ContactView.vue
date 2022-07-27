@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from 'vue';
+import { throttle, useQuasar } from 'quasar';
+
 import { dbClient } from '@/firebase';
+
+const $q = useQuasar();
 
 const name = ref(null);
 const company = ref(null);
@@ -8,16 +12,32 @@ const email = ref(null);
 const phoneNum = ref(null);
 const message = ref(null);
 
-const onSubmit = () => {
-  dbClient.addMessage({
-    name: name.value,
-    company: company.value,
-    email: email.value,
-    phoneNum: phoneNum.value,
-    message: message.value,
-    timeStamp: new Date().toDateString()
-  });
-};
+const onSubmit = throttle(async () => {
+  try {
+    await dbClient.addMessage({
+      name: name.value,
+      company: company.value,
+      email: email.value,
+      phoneNum: phoneNum.value,
+      message: message.value
+    });
+
+    $q.notify({
+      message: 'Message sent',
+      color: 'secondary',
+      textColor: 'white',
+      timeout: 2000
+    });
+  } catch (e) {
+    $q.notify({
+      message: 'Message could not be sent',
+      color: 'warning',
+      textColor: 'black',
+      timeout: 2000
+    });
+  }
+}, 5000);
+
 </script>
 
 <template>
@@ -36,7 +56,7 @@ const onSubmit = () => {
 					no-error-icon
 					:rules="[val => !!val || 'What is your name?']"
 					class="col-6"
-					maxlength="100"
+					maxlength="1000"
 				/>
 
 				<q-input
