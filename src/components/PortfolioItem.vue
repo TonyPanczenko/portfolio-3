@@ -17,7 +17,7 @@ const project = toRef(props, 'project');
 			<h3>
 				{{ project.name }} 
 				<q-icon :name="mdiChevronRight" /> 
-				<a :href="project.previewUrl">{{ project.domain }}</a>
+				<a class="item__preview_link" :href="project.previewUrl">{{ project.domain }}</a>
 			</h3>
 			<div class="item__badgeline">
 				<q-badge v-for="tech in project.technologies"
@@ -110,13 +110,33 @@ $badge-colors: (
 	align-items: flex-start;
 
 	padding: 10px 0;
-	margin: 15px 0;
+	margin: 25px 0;
+
+	@media (max-width: $breakpoint-sm-max) {
+		display: block;
+	}
+
+	&__preview_link {
+		white-space: nowrap;
+	}
 
 	&__carousel {
 		width: 100%;
 		flex: 1 0 400px;
+		margin: 0;
 
 		border: 1px solid rgb(53, 53, 53);
+
+		@media (max-width: $breakpoint-sm-max) {
+			width: 400px;
+
+			margin: 0px auto 20px auto;
+		}
+
+		@media (max-width: $breakpoint-xs-max) {
+			width: 300px;
+			height: 300px;
+		}
 	}
 
 	&__content {
@@ -124,12 +144,21 @@ $badge-colors: (
 		flex-direction: column;
 		flex: 1 1 auto;
 
-		margin-left: 50px;
+		margin-left: 30px;
+
+		@media (max-width: $breakpoint-sm-max) {
+			margin: 0px 0px 30px 0px;
+		}
 	}
 
 	h3 {
 		margin: 10px 0;
 		font-size: 1.8rem;
+
+		@media (max-width: $breakpoint-sm-max) {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
 
 		.q-icon {
 			color: var(--c-accent-fadeout);

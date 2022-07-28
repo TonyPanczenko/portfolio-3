@@ -30,8 +30,15 @@ body {
 
   .layout {
     margin: 0 auto;
-    width: 80%;
-    max-width: $breakpoint-lg-min;
+    max-width: calc($breakpoint-lg-min - 160px);
+
+    @media (max-width: $breakpoint-md-max) {
+      margin: 0 80px;
+		}
+
+    @media (max-width: $breakpoint-sm-max) {
+      margin: 0 15px;
+		}
   }
 }
 </style>

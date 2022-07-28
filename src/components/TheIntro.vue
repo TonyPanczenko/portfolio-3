@@ -33,5 +33,12 @@ h2 {
 
   font-size: 1.8rem;
   text-align: justify;
+
+  @media (max-width: $breakpoint-sm-max) {
+    width: auto;
+
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+	}
 }
 </style>
